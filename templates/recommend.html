@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<center><h3> Suggestions based on movie </h3></center>
+<center><h3> {{title|capitalize}} </h3></center>
+
+<div>
+    <center>
+    <div class="card-body" style="width: 90rem;">
+    <table border = "1" cellpadding = "5" cellspacing = "5"  class = "table table-stripped table-bordered table.sm" >
+    <thead class = "thead-dark">
+    <tr>
+      <th scope="col" width=30% >Movie</th>
+       <th scope="col" width=29% >CAST</th>
+        <th scope="col" width=15% >DIRETOR</th>
+        <th scope="col"  width=2% >TMDB-Rating</th>
+        <th scope="col"  width=50% >SITE</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>
+          {% for x in m %}
+                {{x|capitalize }}  <br><br>
+          {% endfor %}
+      </td>
+
+       <td>
+          {% for x in a %}
+                {{x}}  <br><br>
+          {% endfor %}
+      </td>
+
+       <td>
+          {% for x in d %}
+        {{x|capitalize }}  <br><br>
+      {% endfor %}
+        </td>
+
+       <td>
+          {% for x in r %}
+        {{x}}  <br><br>
+      {% endfor %}
+        </td>
+
+       <td> 
+          {% for x in s %}
+        {{x}}  <br><br>
+      {% endfor %}
+        </td>
+
+    </tr>
+  </tbody>
+</table>
+    </div>
+        </center>
+</div>
+
+<center> <a href = "/" >Home</a></center>
+</body>
+</html>
